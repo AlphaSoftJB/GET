@@ -1,0 +1,122 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: get-backend
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:getdb}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          time_zone: UTC
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+      retries: 3
+    consumer:
+      group-id: get-backend-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.alphasoft.get.*"
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER_URI:http://localhost:8080}
+
+  graphql:
+    graphiql:
+      enabled: true
+      path: /graphiql
+    path: /graphql
+    schema:
+      printer:
+        enabled: true
+
+jwt:
+  secret: ${JWT_SECRET:YWxwaGFzb2Z0LWdldC1iYWNrZW5kLXNlY3JldC1rZXktZm9yLWp3dC10b2tlbi1nZW5lcmF0aW9uLTIwMjQ=}
+  expiration: ${JWT_EXPIRATION:86400000}
+  refresh-expiration: ${JWT_REFRESH_EXPIRATION:604800000}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,env,beans,mappings
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+      probes:
+        enabled: true
+  health:
+    redis:
+      enabled: true
+    db:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    com.alphasoft.get: DEBUG
+    org.springframework.security: INFO
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
+    org.springframework.kafka: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/get-backend.log
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+  show-actuator: true

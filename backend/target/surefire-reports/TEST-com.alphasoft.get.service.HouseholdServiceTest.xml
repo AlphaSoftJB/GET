@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.alphasoft.get.service.HouseholdServiceTest" time="2.314" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/ubuntu/GET-Complete/backend/target/test-classes:/home/ubuntu/GET-Complete/backend/target/classes:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/home/ubuntu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/home/ubuntu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/ubuntu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/home/ubuntu/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/home/ubuntu/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/home/ubuntu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/home/ubuntu/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/home/ubuntu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/ubuntu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/ubuntu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/ubuntu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/ubuntu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/home/ubuntu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/ubuntu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/ubuntu/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-oauth2-resource-server/3.2.0/spring-boot-starter-oauth2-resource-server-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-resource-server/6.2.0/spring-security-oauth2-resource-server-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-core/6.2.0/spring-security-oauth2-core-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-jose/6.2.0/spring-security-oauth2-jose-6.2.0.jar:/home/ubuntu/.m2/repository/com/nimbusds/nimbus-jose-jwt/9.24.4/nimbus-jose-jwt-9.24.4.jar:/home/ubuntu/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-oauth2-client/3.2.0/spring-boot-starter-oauth2-client-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-client/6.2.0/spring-security-oauth2-client-6.2.0.jar:/home/ubuntu/.m2/repository/com/nimbusds/oauth2-oidc-sdk/9.43.3/oauth2-oidc-sdk-9.43.3.jar:/home/ubuntu/.m2/repository/com/nimbusds/content-type/2.2/content-type-2.2.jar:/home/ubuntu/.m2/repository/com/nimbusds/lang-tag/1.7/lang-tag-1.7.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/home/ubuntu/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/home/ubuntu/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-websocket/3.2.0/spring-boot-starter-websocket-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-websocket/6.1.1/spring-websocket-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.2.0/spring-boot-starter-mail-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/home/ubuntu/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar:/home/ubuntu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/ubuntu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/home/ubuntu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/ubuntu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/home/ubuntu/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/ubuntu/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-graphql/3.2.0/spring-boot-starter-graphql-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/graphql/spring-graphql/1.2.4/spring-graphql-1.2.4.jar:/home/ubuntu/.m2/repository/com/graphql-java/graphql-java/21.3/graphql-java-21.3.jar:/home/ubuntu/.m2/repository/com/graphql-java/java-dataloader/3.2.1/java-dataloader-3.2.1.jar:/home/ubuntu/.m2/repository/io/micrometer/context-propagation/1.0.6/context-propagation-1.0.6.jar:/home/ubuntu/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/home/ubuntu/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/home/ubuntu/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/home/ubuntu/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/ubuntu/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/ubuntu/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/home/ubuntu/.m2/repository/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar:/home/ubuntu/.m2/repository/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar:/home/ubuntu/.m2/repository/org/web3j/core/4.10.3/core-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/abi/4.10.3/abi-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/utils/4.10.3/utils-4.10.3.jar:/home/ubuntu/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.73/bcprov-jdk18on-1.73.jar:/home/ubuntu/.m2/repository/org/web3j/crypto/4.10.3/crypto-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/rlp/4.10.3/rlp-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/tuples/4.10.3/tuples-4.10.3.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.jar:/home/ubuntu/.m2/repository/com/github/jnr/jffi/1.3.9/jffi-1.3.9.jar:/home/ubuntu/.m2/repository/com/github/jnr/jffi/1.3.9/jffi-1.3.9-native.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm/9.2/asm-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-util/9.2/asm-util-9.2.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.jar:/home/ubuntu/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar:/home/ubuntu/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar:/home/ubuntu/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.20/kotlin-stdlib-common-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.20/kotlin-stdlib-jdk8-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.20/kotlin-stdlib-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.20/kotlin-stdlib-jdk7-1.9.20.jar:/home/ubuntu/.m2/repository/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.jar:/home/ubuntu/.m2/repository/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.jar:/home/ubuntu/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/ubuntu/.m2/repository/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar:/home/ubuntu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/ubuntu/.m2/repository/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.jar:/home/ubuntu/.m2/repository/com/google/zxing/core/3.5.2/core-3.5.2.jar:/home/ubuntu/.m2/repository/com/google/zxing/javase/3.5.2/javase-3.5.2.jar:/home/ubuntu/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/ubuntu/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.4.0/jai-imageio-core-1.4.0.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/home/ubuntu/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/home/ubuntu/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/home/ubuntu/.m2/repository/org/flywaydb/flyway-core/9.22.3/flyway-core-9.22.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.3/jackson-dataformat-toml-2.15.3.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/ubuntu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/home/ubuntu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/ubuntu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/ubuntu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/ubuntu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/ubuntu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/ubuntu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/ubuntu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/ubuntu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/home/ubuntu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/ubuntu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/home/ubuntu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/ubuntu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/home/ubuntu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/ubuntu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/ubuntu/GET-Complete/backend/target/surefire/surefirebooter-20260614030516826_3.jar /home/ubuntu/GET-Complete/backend/target/surefire 2026-06-14T03-05-16_747-jvmRun1 surefire-20260614030516826_1tmp surefire_0-20260614030516826_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/ubuntu/GET-Complete/backend/target/test-classes:/home/ubuntu/GET-Complete/backend/target/classes:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/home/ubuntu/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/home/ubuntu/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/ubuntu/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/home/ubuntu/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/home/ubuntu/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/home/ubuntu/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/home/ubuntu/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/home/ubuntu/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/ubuntu/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/ubuntu/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/ubuntu/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/ubuntu/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/home/ubuntu/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/home/ubuntu/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/ubuntu/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/ubuntu/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-oauth2-resource-server/3.2.0/spring-boot-starter-oauth2-resource-server-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-resource-server/6.2.0/spring-security-oauth2-resource-server-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-core/6.2.0/spring-security-oauth2-core-6.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-jose/6.2.0/spring-security-oauth2-jose-6.2.0.jar:/home/ubuntu/.m2/repository/com/nimbusds/nimbus-jose-jwt/9.24.4/nimbus-jose-jwt-9.24.4.jar:/home/ubuntu/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-oauth2-client/3.2.0/spring-boot-starter-oauth2-client-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-oauth2-client/6.2.0/spring-security-oauth2-client-6.2.0.jar:/home/ubuntu/.m2/repository/com/nimbusds/oauth2-oidc-sdk/9.43.3/oauth2-oidc-sdk-9.43.3.jar:/home/ubuntu/.m2/repository/com/nimbusds/content-type/2.2/content-type-2.2.jar:/home/ubuntu/.m2/repository/com/nimbusds/lang-tag/1.7/lang-tag-1.7.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.2.0/spring-boot-starter-data-redis-3.2.0.jar:/home/ubuntu/.m2/repository/io/lettuce/lettuce-core/6.3.0.RELEASE/lettuce-core-6.3.0.RELEASE.jar:/home/ubuntu/.m2/repository/io/netty/netty-common/4.1.101.Final/netty-common-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler/4.1.101.Final/netty-handler-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-resolver/4.1.101.Final/netty-resolver-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-buffer/4.1.101.Final/netty-buffer-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.101.Final/netty-transport-native-unix-common-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec/4.1.101.Final/netty-codec-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport/4.1.101.Final/netty-transport-4.1.101.Final.jar:/home/ubuntu/.m2/repository/io/projectreactor/reactor-core/3.6.0/reactor-core-3.6.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-redis/3.2.0/spring-data-redis-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/data/spring-data-keyvalue/3.2.0/spring-data-keyvalue-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-oxm/6.1.1/spring-oxm-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-websocket/3.2.0/spring-boot-starter-websocket-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-messaging/6.1.1/spring-messaging-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-websocket/6.1.1/spring-websocket-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-mail/3.2.0/spring-boot-starter-mail-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-context-support/6.1.1/spring-context-support-6.1.1.jar:/home/ubuntu/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.2/jakarta.mail-2.0.2.jar:/home/ubuntu/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/ubuntu/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/home/ubuntu/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/home/ubuntu/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/ubuntu/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/home/ubuntu/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/home/ubuntu/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/ubuntu/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-graphql/3.2.0/spring-boot-starter-graphql-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/graphql/spring-graphql/1.2.4/spring-graphql-1.2.4.jar:/home/ubuntu/.m2/repository/com/graphql-java/graphql-java/21.3/graphql-java-21.3.jar:/home/ubuntu/.m2/repository/com/graphql-java/java-dataloader/3.2.1/java-dataloader-3.2.1.jar:/home/ubuntu/.m2/repository/io/micrometer/context-propagation/1.0.6/context-propagation-1.0.6.jar:/home/ubuntu/.m2/repository/org/springframework/kafka/spring-kafka/3.1.0/spring-kafka-3.1.0.jar:/home/ubuntu/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/home/ubuntu/.m2/repository/org/apache/kafka/kafka-clients/3.6.0/kafka-clients-3.6.0.jar:/home/ubuntu/.m2/repository/com/github/luben/zstd-jni/1.5.5-1/zstd-jni-1.5.5-1.jar:/home/ubuntu/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/ubuntu/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.4/snappy-java-1.1.10.4.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/home/ubuntu/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/home/ubuntu/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/home/ubuntu/.m2/repository/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar:/home/ubuntu/.m2/repository/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar:/home/ubuntu/.m2/repository/org/web3j/core/4.10.3/core-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/abi/4.10.3/abi-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/utils/4.10.3/utils-4.10.3.jar:/home/ubuntu/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.73/bcprov-jdk18on-1.73.jar:/home/ubuntu/.m2/repository/org/web3j/crypto/4.10.3/crypto-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/rlp/4.10.3/rlp-4.10.3.jar:/home/ubuntu/.m2/repository/org/web3j/tuples/4.10.3/tuples-4.10.3.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-ffi/2.2.11/jnr-ffi-2.2.11.jar:/home/ubuntu/.m2/repository/com/github/jnr/jffi/1.3.9/jffi-1.3.9.jar:/home/ubuntu/.m2/repository/com/github/jnr/jffi/1.3.9/jffi-1.3.9-native.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm/9.2/asm-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-commons/9.2/asm-commons-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-analysis/9.2/asm-analysis-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-tree/9.2/asm-tree-9.2.jar:/home/ubuntu/.m2/repository/org/ow2/asm/asm-util/9.2/asm-util-9.2.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-constants/0.10.3/jnr-constants-0.10.3.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-enxio/0.32.13/jnr-enxio-0.32.13.jar:/home/ubuntu/.m2/repository/com/github/jnr/jnr-posix/3.1.15/jnr-posix-3.1.15.jar:/home/ubuntu/.m2/repository/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar:/home/ubuntu/.m2/repository/com/squareup/okio/okio/3.6.0/okio-3.6.0.jar:/home/ubuntu/.m2/repository/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.20/kotlin-stdlib-common-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.20/kotlin-stdlib-jdk8-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.20/kotlin-stdlib-1.9.20.jar:/home/ubuntu/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/ubuntu/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.20/kotlin-stdlib-jdk7-1.9.20.jar:/home/ubuntu/.m2/repository/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.jar:/home/ubuntu/.m2/repository/io/reactivex/rxjava2/rxjava/2.2.2/rxjava-2.2.2.jar:/home/ubuntu/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/ubuntu/.m2/repository/org/java-websocket/Java-WebSocket/1.5.3/Java-WebSocket-1.5.3.jar:/home/ubuntu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/ubuntu/.m2/repository/io/github/adraffy/ens-normalize/0.1.2/ens-normalize-0.1.2.jar:/home/ubuntu/.m2/repository/com/google/zxing/core/3.5.2/core-3.5.2.jar:/home/ubuntu/.m2/repository/com/google/zxing/javase/3.5.2/javase-3.5.2.jar:/home/ubuntu/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/ubuntu/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.4.0/jai-imageio-core-1.4.0.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.3.0/springdoc-openapi-starter-webmvc-ui-2.3.0.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.3.0/springdoc-openapi-starter-webmvc-api-2.3.0.jar:/home/ubuntu/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.3.0/springdoc-openapi-starter-common-2.3.0.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.19/swagger-core-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.19/swagger-annotations-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.19/swagger-models-jakarta-2.2.19.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/home/ubuntu/.m2/repository/org/webjars/swagger-ui/5.10.3/swagger-ui-5.10.3.jar:/home/ubuntu/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/home/ubuntu/.m2/repository/org/flywaydb/flyway-core/9.22.3/flyway-core-9.22.3.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.3/jackson-dataformat-toml-2.15.3.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/home/ubuntu/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/home/ubuntu/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/ubuntu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/home/ubuntu/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/home/ubuntu/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/home/ubuntu/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/ubuntu/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/ubuntu/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/ubuntu/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/ubuntu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/ubuntu/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/ubuntu/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/home/ubuntu/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/ubuntu/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/home/ubuntu/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/ubuntu/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/home/ubuntu/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/home/ubuntu/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/ubuntu/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/home/ubuntu/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/ubuntu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/ubuntu/GET-Complete/backend"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/ubuntu/GET-Complete/backend/target/surefire/surefirebooter-20260614030516826_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.19+10-1-24.04.2-Ubuntu"/>
+    <property name="user.name" value="ubuntu"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.1.102"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="LOG_FILE" value="logs/get-backend.log"/>
+    <property name="localRepository" value="/home/ubuntu/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="com.zaxxer.hikari.pool_number" value="3"/>
+    <property name="java.version" value="17.0.19"/>
+    <property name="user.dir" value="/home/ubuntu/GET-Complete/backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="14289"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.19+10-1-24.04.2-Ubuntu"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[get-backend] "/>
+  </properties>
+  <testcase name="testCreateHouseholdAndAddMember" classname="com.alphasoft.get.service.HouseholdServiceTest" time="0.037">
+    <system-out><![CDATA[2026-06-14 03:05:30 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.alphasoft.get.service.HouseholdServiceTest]: HouseholdServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-14 03:05:30 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.alphasoft.get.GetApplication for test class com.alphasoft.get.service.HouseholdServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-06-14 03:05:30 [main] INFO  c.a.get.service.HouseholdServiceTest - Starting HouseholdServiceTest using Java 17.0.19 with PID 14289 (started by ubuntu in /home/ubuntu/GET-Complete/backend)
+2026-06-14 03:05:30 [main] DEBUG c.a.get.service.HouseholdServiceTest - Running with Spring Boot v3.2.0, Spring v6.1.1
+2026-06-14 03:05:30 [main] INFO  c.a.get.service.HouseholdServiceTest - The following 1 profile is active: "test"
+2026-06-14 03:05:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-14 03:05:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-14 03:05:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 9 JPA repository interfaces.
+2026-06-14 03:05:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-06-14 03:05:31 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection conn5: url=jdbc:h2:mem:testdb user=SA
+2026-06-14 03:05:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-06-14 03:05:31 [main] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-06-14 03:05:31 [main] WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-06-14 03:05:31 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 0 migrations (execution time 00:00.000s)
+2026-06-14 03:05:31 [main] WARN  o.f.core.internal.command.DbValidate - No migrations found. Are your locations set up correctly?
+2026-06-14 03:05:31 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+2026-06-14 03:05:31 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "PUBLIC" is up to date. No migration necessary.
+2026-06-14 03:05:31 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-14 03:05:31 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-14 03:05:31 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-14 03:05:31 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 11.0.0. Check the community dialects project for available legacy versions.
+2026-06-14 03:05:31 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-14 03:05:31 [main] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@72866288) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6c9635e6)
+2026-06-14 03:05:31 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists achievements 
+       drop constraint if exists FK1efgavvlxwajrr25mqpl34m1n
+Hibernate: 
+    alter table if exists achievements 
+       drop constraint if exists FK1efgavvlxwajrr25mqpl34m1n
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists household_members 
+       drop constraint if exists FKits4dus4oxqsobbp02l23iw8x
+Hibernate: 
+    alter table if exists household_members 
+       drop constraint if exists FKits4dus4oxqsobbp02l23iw8x
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists household_members 
+       drop constraint if exists FK1qcyeyx7v52432f6hyswues69
+Hibernate: 
+    alter table if exists household_members 
+       drop constraint if exists FK1qcyeyx7v52432f6hyswues69
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists households_members 
+       drop constraint if exists FK27qriagldiuwhtbewrat95eyf
+Hibernate: 
+    alter table if exists households_members 
+       drop constraint if exists FK27qriagldiuwhtbewrat95eyf
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists households_members 
+       drop constraint if exists FKpoc84rt7v0lwjwsnne8534u0p
+Hibernate: 
+    alter table if exists households_members 
+       drop constraint if exists FKpoc84rt7v0lwjwsnne8534u0p
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory 
+       drop constraint if exists FKfl9scxjkghj0a3l4w0ardlqku
+Hibernate: 
+    alter table if exists inventory 
+       drop constraint if exists FKfl9scxjkghj0a3l4w0ardlqku
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory_items 
+       drop constraint if exists FKo2vo116ny6kmglx8ftoh1ds62
+Hibernate: 
+    alter table if exists inventory_items 
+       drop constraint if exists FKo2vo116ny6kmglx8ftoh1ds62
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory_items 
+       drop constraint if exists FKgibmey91qp9ep97mf1j6qh5ty
+Hibernate: 
+    alter table if exists inventory_items 
+       drop constraint if exists FKgibmey91qp9ep97mf1j6qh5ty
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       drop constraint if exists FK9y21adhxn0ayjhfocscqox7bh
+Hibernate: 
+    alter table if exists notifications 
+       drop constraint if exists FK9y21adhxn0ayjhfocscqox7bh
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists nutritional_info 
+       drop constraint if exists FKp77ykc69v8m0j98x4sire3wl8
+Hibernate: 
+    alter table if exists nutritional_info 
+       drop constraint if exists FKp77ykc69v8m0j98x4sire3wl8
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists shopping_list_items 
+       drop constraint if exists FKf1rsukdom7rt2b53s3dn26xc1
+Hibernate: 
+    alter table if exists shopping_list_items 
+       drop constraint if exists FKf1rsukdom7rt2b53s3dn26xc1
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists shopping_list_items 
+       drop constraint if exists FKo53jb29vrrg4ipbb720cmepap
+Hibernate: 
+    alter table if exists shopping_list_items 
+       drop constraint if exists FKo53jb29vrrg4ipbb720cmepap
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists achievements cascade
+Hibernate: 
+    drop table if exists achievements cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists household_members cascade
+Hibernate: 
+    drop table if exists household_members cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists households cascade
+Hibernate: 
+    drop table if exists households cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists households_members cascade
+Hibernate: 
+    drop table if exists households_members cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists inventory cascade
+Hibernate: 
+    drop table if exists inventory cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists inventory_items cascade
+Hibernate: 
+    drop table if exists inventory_items cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists notifications cascade
+Hibernate: 
+    drop table if exists notifications cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists nutritional_info cascade
+Hibernate: 
+    drop table if exists nutritional_info cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists shopping_list_items cascade
+Hibernate: 
+    drop table if exists shopping_list_items cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    drop table if exists users cascade
+Hibernate: 
+    drop table if exists users cascade
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table achievements (
+        points integer,
+        earned_at timestamp(6),
+        id bigserial not null,
+        user_id bigint,
+        description varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table achievements (
+        points integer,
+        earned_at timestamp(6),
+        id bigserial not null,
+        user_id bigint,
+        description varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table household_members (
+        household_id bigint not null,
+        joined_at timestamp(6) not null,
+        user_id bigint not null,
+        id uuid not null,
+        role varchar(20) not null check (role in ('OWNER','ADMIN','MEMBER')),
+        primary key (id),
+        unique (household_id, user_id)
+    )
+Hibernate: 
+    create table household_members (
+        household_id bigint not null,
+        joined_at timestamp(6) not null,
+        user_id bigint not null,
+        id uuid not null,
+        role varchar(20) not null check (role in ('OWNER','ADMIN','MEMBER')),
+        primary key (id),
+        unique (household_id, user_id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table households (
+        id bigserial not null,
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table households (
+        id bigserial not null,
+        name varchar(255) not null,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table households_members (
+        household_id bigint not null,
+        members_id bigint not null
+    )
+Hibernate: 
+    create table households_members (
+        household_id bigint not null,
+        members_id bigint not null
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table inventory (
+        expiration_date date,
+        quantity integer,
+        household_id bigint,
+        id bigserial not null,
+        category varchar(255),
+        location varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table inventory (
+        expiration_date date,
+        quantity integer,
+        household_id bigint,
+        id bigserial not null,
+        category varchar(255),
+        location varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table inventory_items (
+        expiration_date date,
+        price numeric(10,2),
+        purchase_date date,
+        quantity float(53) not null,
+        added_by bigint not null,
+        created_at timestamp(6) not null,
+        household_id bigint not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        status varchar(20) not null check (status in ('ACTIVE','USED','EXPIRED','DONATED')),
+        barcode varchar(50),
+        unit varchar(50),
+        brand varchar(100),
+        category varchar(100),
+        name varchar(200) not null,
+        image_url varchar(500),
+        notes TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    create table inventory_items (
+        expiration_date date,
+        price numeric(10,2),
+        purchase_date date,
+        quantity float(53) not null,
+        added_by bigint not null,
+        created_at timestamp(6) not null,
+        household_id bigint not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        status varchar(20) not null check (status in ('ACTIVE','USED','EXPIRED','DONATED')),
+        barcode varchar(50),
+        unit varchar(50),
+        brand varchar(100),
+        category varchar(100),
+        name varchar(200) not null,
+        image_url varchar(500),
+        notes TEXT,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table notifications (
+        read boolean not null,
+        created_at timestamp(6) not null,
+        user_id bigint not null,
+        id uuid not null,
+        type varchar(50) not null,
+        title varchar(200) not null,
+        message TEXT,
+        primary key (id)
+    )
+Hibernate: 
+    create table notifications (
+        read boolean not null,
+        created_at timestamp(6) not null,
+        user_id bigint not null,
+        id uuid not null,
+        type varchar(50) not null,
+        title varchar(200) not null,
+        message TEXT,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table nutritional_info (
+        calories float(53),
+        carbohydrates float(53),
+        fat float(53),
+        fiber float(53),
+        protein float(53),
+        id bigserial not null,
+        inventory_id bigint unique,
+        allergens varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table nutritional_info (
+        calories float(53),
+        carbohydrates float(53),
+        fat float(53),
+        fiber float(53),
+        protein float(53),
+        id bigserial not null,
+        inventory_id bigint unique,
+        allergens varchar(255),
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table shopping_list_items (
+        checked boolean not null,
+        priority integer,
+        quantity float(53) not null,
+        added_by bigint not null,
+        created_at timestamp(6) not null,
+        household_id bigint not null,
+        id uuid not null,
+        unit varchar(50),
+        category varchar(100),
+        name varchar(200) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table shopping_list_items (
+        checked boolean not null,
+        priority integer,
+        quantity float(53) not null,
+        added_by bigint not null,
+        created_at timestamp(6) not null,
+        household_id bigint not null,
+        id uuid not null,
+        unit varchar(50),
+        category varchar(100),
+        name varchar(200) not null,
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        id bigserial not null,
+        email varchar(255) not null unique,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role varchar(255) check (role in ('ADMIN','USER')),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        id bigserial not null,
+        email varchar(255) not null unique,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255) not null,
+        role varchar(255) check (role in ('ADMIN','USER')),
+        primary key (id)
+    )
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_inventory_household 
+       on inventory_items (household_id)
+Hibernate: 
+    create index idx_inventory_household 
+       on inventory_items (household_id)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_inventory_barcode 
+       on inventory_items (barcode)
+Hibernate: 
+    create index idx_inventory_barcode 
+       on inventory_items (barcode)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_inventory_expiration 
+       on inventory_items (expiration_date)
+Hibernate: 
+    create index idx_inventory_expiration 
+       on inventory_items (expiration_date)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_inventory_status 
+       on inventory_items (status)
+Hibernate: 
+    create index idx_inventory_status 
+       on inventory_items (status)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_notification_user 
+       on notifications (user_id)
+Hibernate: 
+    create index idx_notification_user 
+       on notifications (user_id)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_notification_read 
+       on notifications (read)
+Hibernate: 
+    create index idx_notification_read 
+       on notifications (read)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_shopping_household 
+       on shopping_list_items (household_id)
+Hibernate: 
+    create index idx_shopping_household 
+       on shopping_list_items (household_id)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    create index idx_shopping_checked 
+       on shopping_list_items (checked)
+Hibernate: 
+    create index idx_shopping_checked 
+       on shopping_list_items (checked)
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists achievements 
+       add constraint FK1efgavvlxwajrr25mqpl34m1n 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists achievements 
+       add constraint FK1efgavvlxwajrr25mqpl34m1n 
+       foreign key (user_id) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists household_members 
+       add constraint FKits4dus4oxqsobbp02l23iw8x 
+       foreign key (household_id) 
+       references households
+Hibernate: 
+    alter table if exists household_members 
+       add constraint FKits4dus4oxqsobbp02l23iw8x 
+       foreign key (household_id) 
+       references households
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists household_members 
+       add constraint FK1qcyeyx7v52432f6hyswues69 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists household_members 
+       add constraint FK1qcyeyx7v52432f6hyswues69 
+       foreign key (user_id) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists households_members 
+       add constraint FK27qriagldiuwhtbewrat95eyf 
+       foreign key (members_id) 
+       references users
+Hibernate: 
+    alter table if exists households_members 
+       add constraint FK27qriagldiuwhtbewrat95eyf 
+       foreign key (members_id) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists households_members 
+       add constraint FKpoc84rt7v0lwjwsnne8534u0p 
+       foreign key (household_id) 
+       references households
+Hibernate: 
+    alter table if exists households_members 
+       add constraint FKpoc84rt7v0lwjwsnne8534u0p 
+       foreign key (household_id) 
+       references households
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory 
+       add constraint FKfl9scxjkghj0a3l4w0ardlqku 
+       foreign key (household_id) 
+       references households
+Hibernate: 
+    alter table if exists inventory 
+       add constraint FKfl9scxjkghj0a3l4w0ardlqku 
+       foreign key (household_id) 
+       references households
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory_items 
+       add constraint FKo2vo116ny6kmglx8ftoh1ds62 
+       foreign key (added_by) 
+       references users
+Hibernate: 
+    alter table if exists inventory_items 
+       add constraint FKo2vo116ny6kmglx8ftoh1ds62 
+       foreign key (added_by) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists inventory_items 
+       add constraint FKgibmey91qp9ep97mf1j6qh5ty 
+       foreign key (household_id) 
+       references households
+Hibernate: 
+    alter table if exists inventory_items 
+       add constraint FKgibmey91qp9ep97mf1j6qh5ty 
+       foreign key (household_id) 
+       references households
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists notifications 
+       add constraint FK9y21adhxn0ayjhfocscqox7bh 
+       foreign key (user_id) 
+       references users
+Hibernate: 
+    alter table if exists notifications 
+       add constraint FK9y21adhxn0ayjhfocscqox7bh 
+       foreign key (user_id) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists nutritional_info 
+       add constraint FKp77ykc69v8m0j98x4sire3wl8 
+       foreign key (inventory_id) 
+       references inventory
+Hibernate: 
+    alter table if exists nutritional_info 
+       add constraint FKp77ykc69v8m0j98x4sire3wl8 
+       foreign key (inventory_id) 
+       references inventory
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists shopping_list_items 
+       add constraint FKf1rsukdom7rt2b53s3dn26xc1 
+       foreign key (added_by) 
+       references users
+Hibernate: 
+    alter table if exists shopping_list_items 
+       add constraint FKf1rsukdom7rt2b53s3dn26xc1 
+       foreign key (added_by) 
+       references users
+2026-06-14 03:05:31 [main] DEBUG org.hibernate.SQL - 
+    alter table if exists shopping_list_items 
+       add constraint FKo53jb29vrrg4ipbb720cmepap 
+       foreign key (household_id) 
+       references households
+Hibernate: 
+    alter table if exists shopping_list_items 
+       add constraint FKo53jb29vrrg4ipbb720cmepap 
+       foreign key (household_id) 
+       references households
+2026-06-14 03:05:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-14 03:05:32 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 6 endpoint(s) beneath base path '/actuator'
+2026-06-14 03:05:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-14 03:05:32 [main] INFO  o.s.g.e.DefaultSchemaResourceGraphQlSourceBuilder - Loaded 1 resource(s) in the GraphQL schema.
+2026-06-14 03:05:32 [main] INFO  o.s.b.a.g.GraphQlAutoConfiguration - GraphQL schema inspection:
+	Unmapped fields: {Query=[item, household], Mutation=[updateItem, deleteItem]}
+	Unmapped registrations: {}
+	Skipped types: []
+2026-06-14 03:05:32 [main] INFO  o.s.b.a.g.s.GraphQlWebMvcAutoConfiguration - GraphQL endpoint HTTP POST /graphql
+2026-06-14 03:05:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8fb6a63, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f30716f, org.springframework.security.web.context.SecurityContextHolderFilter@3497d8b3, org.springframework.security.web.header.HeaderWriterFilter@7ee28bb1, org.springframework.security.web.authentication.logout.LogoutFilter@70abc6d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4479ba5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8742566, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@302634ac, org.springframework.security.web.session.SessionManagementFilter@31844aaf, org.springframework.security.web.access.ExceptionTranslationFilter@4178ef21, org.springframework.security.web.access.intercept.AuthorizationFilter@7d04b157]
+2026-06-14 03:05:33 [main] INFO  c.a.get.service.HouseholdServiceTest - Started HouseholdServiceTest in 2.264 seconds (process running for 16.331)
+2026-06-14 03:05:33 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.alphasoft.get.model.User */insert 
+    into
+        users (email, first_name, last_name, password, role) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.alphasoft.get.model.User */insert 
+    into
+        users (email, first_name, last_name, password, role) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-14 03:05:33 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.alphasoft.get.model.Household */insert 
+    into
+        households (name) 
+    values
+        (?)
+Hibernate: 
+    /* insert for
+        com.alphasoft.get.model.Household */insert 
+    into
+        households (name) 
+    values
+        (?)
+2026-06-14 03:05:33 [main] DEBUG org.hibernate.SQL - 
+    /* insert for
+        com.alphasoft.get.model.User */insert 
+    into
+        users (email, first_name, last_name, password, role) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    /* insert for
+        com.alphasoft.get.model.User */insert 
+    into
+        users (email, first_name, last_name, password, role) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-14 03:05:33 [main] DEBUG org.hibernate.SQL - 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+Hibernate: 
+    /* <criteria> */ select
+        u1_0.id,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+]]></system-out>
+  </testcase>
+</testsuite>

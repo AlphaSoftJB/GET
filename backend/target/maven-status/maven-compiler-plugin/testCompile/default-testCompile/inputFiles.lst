@@ -1,0 +1,17 @@
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/model/AdvancedEntitiesTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/ai/AIServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/InventoryServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/ar/ARServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/BaseTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/security/JwtUtilsTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/controller/AuthControllerTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/RetailerServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/UserServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/blockchain/BlockchainServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/GamificationServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/HouseholdServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/config/TestConfig.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/voice/VoiceServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/model/InventoryTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/service/iot/IoTServiceTest.java
+/home/ubuntu/GET-Complete/backend/src/test/java/com/alphasoft/get/model/UserTest.java
