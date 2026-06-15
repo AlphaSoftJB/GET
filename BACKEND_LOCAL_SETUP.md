@@ -1,14 +1,36 @@
-# 🚀 GET Backend Local Setup Guide
+# 🚀 GET Backend Local Setup Guide (Linux)
 
-This guide will help you get the GET backend up and running on your local machine for development and testing.
+This guide will help you get the GET backend up and running on your Linux machine (Ubuntu/Debian/Fedora/Arch).
 
 ## 📋 Prerequisites
 
-Ensure you have the following installed:
-- **Java 17 or higher** (OpenJDK 17 recommended)
-- **Maven 3.8+**
-- **Docker & Docker Compose** (for infrastructure services)
-- **Git**
+Ensure you have the following installed. Here are the commands for **Ubuntu/Debian**:
+
+### 1. Java 17 (OpenJDK)
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk
+java -version
+```
+
+### 2. Maven
+```bash
+sudo apt install maven
+mvn -version
+```
+
+### 3. Docker & Docker Compose
+Follow the official [Docker Installation Guide for Linux](https://docs.docker.com/desktop/install/linux-install/).
+**Important:** Ensure your user is in the `docker` group to run commands without `sudo`:
+```bash
+sudo usermod -aG docker $USER
+# Log out and log back in for changes to take effect
+```
+
+### 4. Git
+```bash
+sudo apt install git
+```
 
 ## 🛠️ Step 1: Clone the Repository
 
@@ -19,33 +41,29 @@ cd GET/backend
 
 ## 🏗️ Step 2: Start Infrastructure Services
 
-The backend relies on PostgreSQL, Redis, and Kafka. You can start these easily using the provided `docker-compose.yml` in the root directory:
+The backend relies on PostgreSQL, Redis, and Kafka. Start them using Docker Compose from the project root:
 
 ```bash
 cd ..
 docker-compose up -d
 ```
 
-This will start:
-- **PostgreSQL**: Port 5432
-- **Redis**: Port 6379
-- **Kafka**: Port 9092
+Verify they are running:
+```bash
+docker ps
+```
 
 ## ⚙️ Step 3: Configure Environment
 
-The backend uses `src/main/resources/application.properties`. For local development, ensure the following properties match your Docker setup:
+The backend uses `src/main/resources/application.properties`. For local development, the defaults are set to work with the Docker containers. If you need to change them:
 
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/get_db
-spring.datasource.username=postgres
-spring.datasource.password=postgres
-spring.data.redis.host=localhost
-spring.kafka.bootstrap-servers=localhost:9092
+```bash
+nano backend/src/main/resources/application.properties
 ```
 
 ## 🚀 Step 4: Build and Run
 
-From the `backend` directory, run:
+From the `backend` directory:
 
 ```bash
 mvn clean install
@@ -57,36 +75,34 @@ The server will start on `http://localhost:8080`.
 ## ✅ Step 5: Verify the Installation
 
 ### 1. Run Tests
-Ensure everything is working as intended by running the full test suite:
 ```bash
 mvn test
 ```
 
 ### 2. Health Check
-Visit `http://localhost:8080/actuator/health` in your browser. You should see:
-```json
-{
-  "status": "UP"
-}
+```bash
+curl -i http://localhost:8080/actuator/health
 ```
 
-### 3. API Documentation
-The backend provides a GraphQL playground (if enabled) and REST endpoints. You can test the Auth endpoint using `curl`:
-
+### 3. Test Registration API
 ```bash
 curl -X POST http://localhost:8080/api/auth/register \
      -H "Content-Type: application/json" \
-     -d '{"email":"test@example.com", "password":"password123", "firstName":"Test", "lastName":"User"}'
+     -d '{"email":"linux@example.com", "password":"password123", "firstName":"Linux", "lastName":"User"}'
 ```
 
-## 🧪 Advanced Features Testing
+## 🧪 Advanced Features
 
-- **AI Service**: Automatic expiration prediction logic is active for new inventory items.
-- **Blockchain**: Audit trails are simulated and can be viewed in the logs.
-- **GraphQL**: Access the schema at `http://localhost:8080/graphql`.
+- **AI Service**: Uses TensorFlow Java for predictions.
+- **GraphQL**: Explore the API at `http://localhost:8080/graphql`.
+- **Logs**: Monitor real-time logs with `tail -f logs/app.log` (if configured) or the console output.
 
-## 🆘 Troubleshooting
+## 🆘 Troubleshooting (Linux Specific)
 
-- **Database Connection**: Ensure Docker containers are running (`docker ps`).
-- **Port Conflicts**: If 8080 is taken, change `server.port` in `application.properties`.
-- **Kafka Errors**: Kafka may take a minute to fully initialize after Docker starts.
+- **Port 8080 already in use**: Find the process and kill it:
+  ```bash
+  sudo lsof -i :8080
+  kill -9 <PID>
+  ```
+- **Docker Permission Denied**: If you get permission errors, either use `sudo docker-compose` or fix the group permissions as shown in the Prerequisites.
+- **Memory Issues**: Kafka and AI services can be memory-intensive. Ensure you have at least 4GB of free RAM.
